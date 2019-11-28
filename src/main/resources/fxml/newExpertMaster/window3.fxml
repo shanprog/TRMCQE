@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.aofoms.controller.newExpertMaster.Window3Controller"
+            prefHeight="365.0" prefWidth="350.0">
+    <padding>
+        <Insets left="10.0" right="10.0"/>
+    </padding>
+    <VBox prefHeight="365.0" prefWidth="350.0"
+          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <HBox prefHeight="165.0" prefWidth="330.0">
+            <padding>
+                <Insets top="5.0"/>
+            </padding>
+            <VBox prefHeight="110.0" prefWidth="300.0">
+                <padding>
+                    <Insets right="10.0"/>
+                </padding>
+                <Label prefHeight="25.0" text="Места работы"/>
+                <ListView fx:id="listWorkplace" onMousePressed="#editWorkplace" prefHeight="135.0" prefWidth="290.0"/>
+            </VBox>
+            <VBox prefHeight="165.0" prefWidth="30.0" spacing="5.0">
+                <padding>
+                    <Insets top="25.0"/>
+                </padding>
+                <Button mnemonicParsing="false" prefWidth="30.0" onAction="#addWorkplace" text="+"/>
+                <Button mnemonicParsing="false" prefWidth="30.0" onAction="#delWorkplace" text="-"/>
+            </VBox>
+        </HBox>
+        <HBox prefHeight="165.0" prefWidth="330.0">
+            <padding>
+                <Insets top="5.0"/>
+            </padding>
+            <VBox prefHeight="165.0" prefWidth="300.0">
+                <padding>
+                    <Insets right="10.0"/>
+                </padding>
+                <Label prefHeight="25.0" text="Включения"/>
+                <ListView fx:id="listInclusions" onMousePressed="#editInclusions" prefHeight="135.0" prefWidth="290.0"/>
+            </VBox>
+            <VBox prefHeight="165.0" prefWidth="30.0" spacing="5.0">
+                <padding>
+                    <Insets top="25.0"/>
+                </padding>
+                <Button mnemonicParsing="false" prefWidth="30.0" onAction="#addInclusions" text="+"/>
+                <Button mnemonicParsing="false" prefWidth="30.0" onAction="#delInclusions" text="-"/>
+            </VBox>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="330.0" spacing="5.0">
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <padding>
+                <Insets bottom="5.0" top="10.0"/>
+            </padding>
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="60.0" text="Отмена"/>
+            <Button mnemonicParsing="false" onAction="#back" prefWidth="60.0" text="Назад"/>
+            <Button mnemonicParsing="false" onAction="#next" prefWidth="60.0" text="Далее"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

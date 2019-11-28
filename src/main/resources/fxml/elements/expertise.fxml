@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import ru.aofoms.util.MaskField?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.aofoms.controller.ExpertiseController"
+            prefHeight="155.0" prefWidth="400.0">
+    <padding>
+        <Insets left="10.0" right="10.0"/>
+    </padding>
+    <VBox layoutX="150.0" layoutY="50.0" prefHeight="155.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox prefHeight="55.0" prefWidth="380.0">
+            <padding>
+                <Insets top="5.0"/>
+            </padding>
+            <HBox prefHeight="50.0" prefWidth="380.0">
+                <VBox prefHeight="50.0" prefWidth="125.0">
+                    <padding>
+                        <Insets right="5.0"/>
+                    </padding>
+                    <Label prefHeight="25.0" text="Год"/>
+                    <MaskField fx:id="year" mask="DDDD"/>
+                </VBox>
+                <VBox prefHeight="50.0" prefWidth="130.0">
+                    <padding>
+                        <Insets right="5.0"/>
+                    </padding>
+                    <Label prefHeight="25.0" text="Экспертизы"/>
+                    <TextField fx:id="exp"/>
+                </VBox>
+                <VBox prefHeight="50.0" prefWidth="125.0">
+                    <Label prefHeight="25.0" text="Реекспертизы"/>
+                    <TextField fx:id="reexp"/>
+                </VBox>
+            </HBox>
+        </VBox>
+        <VBox prefHeight="55.0" prefWidth="380.0">
+            <padding>
+                <Insets top="5.0"/>
+            </padding>
+            <Label text="Специальность"/>
+            <ComboBox prefWidth="380.0" fx:id="specialtyBox"/>
+        </VBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="200.0" spacing="5.0">
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="60.0" text="Отмена"/>
+            <Button mnemonicParsing="false" onAction="#ok" prefWidth="60.0" text="ОК"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

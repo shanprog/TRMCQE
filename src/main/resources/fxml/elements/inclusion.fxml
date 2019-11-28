@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import ru.aofoms.util.MaskField?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.aofoms.controller.InclusionController"
+            prefHeight="140.0" prefWidth="375.0">
+    <padding>
+        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0"/>
+    </padding>
+    <VBox layoutX="140.0" layoutY="23.0" prefHeight="260.0" prefWidth="375.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox prefHeight="50.0" prefWidth="355.0">
+            <Label prefHeight="25.0" text="Дата включения"/>
+            <MaskField fx:id="dateField" mask="DD.DD.DDDD"/>
+        </VBox>
+        <VBox prefHeight="55.0" prefWidth="355.0">
+            <VBox.margin>
+                <Insets top="5.0"/>
+            </VBox.margin>
+            <Label prefHeight="25.0" text="Предложившая организация"/>
+            <ComboBox fx:id="inviteOrgBox" prefHeight="25.0" prefWidth="367.0"/>
+        </VBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="355.0" spacing="5.0">
+            <VBox.margin>
+                <Insets top="10.0"/>
+            </VBox.margin>
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="60.0" text="Отмена"/>
+            <Button mnemonicParsing="false" onAction="#ok" prefWidth="60.0" text="Ок"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

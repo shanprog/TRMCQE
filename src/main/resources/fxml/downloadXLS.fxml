@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="90.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.aofoms.controller.DownloadXLSController">
+    <padding>
+        <Insets left="10.0" right="10.0"/>
+    </padding>
+    <VBox layoutX="100.0" layoutY="5.0" prefHeight="90.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox prefHeight="50.0" prefWidth="380.0">
+            <Label prefHeight="25.0" text="Выгрузить в:"/>
+            <HBox prefHeight="25.0" prefWidth="380.0" spacing="5.0">
+                <TextField fx:id="path" prefHeight="25.0" prefWidth="325.0"/>
+                <Button mnemonicParsing="false" prefWidth="60.0" onAction="#openDirectoryChooser" text="Обзор"/>
+            </HBox>
+        </VBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="380.0" spacing="5.0">
+            <padding>
+                <Insets top="10.0"/>
+            </padding>
+            <Button mnemonicParsing="false" onAction="#cancel" prefWidth="60.0" text="Отмена"/>
+            <Button mnemonicParsing="false" onAction="#ok" prefWidth="60.0" text="ОК"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
